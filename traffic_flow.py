@@ -12,3 +12,5 @@ training_set = pd.read_csv(r"/Users/mariochima/Desktop/my first folder/coding fo
 
 print(training_set.head())
 print(training_set['location'].unique())
+
+#testing
