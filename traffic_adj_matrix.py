@@ -33,7 +33,7 @@ graph_features = pd.DataFrame({
 G = nx.from_numpy_array(adj_matrix_np)
 
 # Draw the graph
-plt.figure(figsize=(12, 12))  # Set figure size
+plt.figure(figsize=(12, 10))  # Set figure size
 pos = nx.spring_layout(G)  # Spring layout for a visually appealing arrangement
 
 # Draw nodes and edges

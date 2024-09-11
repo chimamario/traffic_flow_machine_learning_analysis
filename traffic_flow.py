@@ -15,8 +15,9 @@ training_set = pd.read_csv(r"/Users/mariochima/Desktop/my first folder/coding fo
 
 pd.set_option('display.max_rows', None)  # Show all rows
 pd.set_option('display.max_columns', None) 
-# print(training_set.head())
-# print(training_set.columns)
+print(training_set.head())
+print(training_set['timestep'].unique())
+print(1261/60)
 
 #testing
 #testing 2
