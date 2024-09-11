@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import networkx as nx
+import matplotlib.pyplot as plt
 
 adj_matrix = pd.read_csv(r"/Users/mariochima/Desktop/my first folder/coding folder/machine learning practice/traffic flow/adj_matrix.csv", index_col=0)
 
@@ -27,5 +28,23 @@ graph_features = pd.DataFrame({
     'connected_component_size': connected_component_size_list,
 })
 
-# # Print or save features to CSV
-print(graph_features)
+# print(graph_features)
+
+G = nx.from_numpy_array(adj_matrix_np)
+
+# Draw the graph
+plt.figure(figsize=(12, 12))  # Set figure size
+pos = nx.spring_layout(G)  # Spring layout for a visually appealing arrangement
+
+# Draw nodes and edges
+nx.draw_networkx_nodes(G, pos, node_size=500, node_color='skyblue')
+nx.draw_networkx_edges(G, pos, width=1.0, alpha=0.7)
+nx.draw_networkx_labels(G, pos, font_size=12, font_color='black')
+
+# Display the graph
+plt.title("Graph Visualization Based on Adjacency Matrix")
+plt.show()
+
+
+
+
