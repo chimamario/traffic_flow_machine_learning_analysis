@@ -10,7 +10,7 @@ import networkx as nx
 #each location refers to 1261 timestamps (each time stamp are 15 min intervals)
 #ex - one row refers to a location, at a specific timestamp. it has the traffic rate at that point as well as 
 
-training_set = pd.read_csv(r"/Users/mariochima/Desktop/my first folder/coding folder/machine learning practice/traffic flow/train.csv")
+training_set = pd.read_csv(r"/Users/mariochima/Desktop/my first folder/coding folder/machine learning practice/traffic flow/train.csv", index_col=0)
 
 
 pd.set_option('display.max_rows', None)  # Show all rows
